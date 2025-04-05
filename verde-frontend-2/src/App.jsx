@@ -1,5 +1,5 @@
 // App.jsx
-
+// can use const onclick => navigate ('/*destination*)
 // import libraries
 import {Routes, Route} from "react-router"
 // import files

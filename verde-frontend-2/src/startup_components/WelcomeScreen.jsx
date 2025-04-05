@@ -1,10 +1,11 @@
 // WelcomeScreen.jsx
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/images/Verde Full Logo.png";
 import hydroponics from "../assets/images/hydroponics2.jpg";
-import {Link} from "react-router";
-import {Routes, Route} from "react-router"
 
 const WelcomeScreen = ({ setView }) => {
+  const navigate = useNavigate();
+
   return (
     <>
       {/* Logo */}
@@ -35,19 +36,19 @@ const WelcomeScreen = ({ setView }) => {
 
         {/* Right Side with buttons */}
         <div className="ml-4 w-[45%] h-[80%] bg-black/30 p-5 rounded-[10px] text-center flex flex-col items-center justify-center gap-4">
-            <h2 className="text-white text-2xl font-bold">Getting Started</h2>
-            <Link
-                to="/login"
-                className="w-full text-center bg-black text-white text-lg py-2 px-4 rounded-[15px] hover:bg-[#064918] transition"
-            >
-                Log In
-            </Link>
-            <Link
-                to="/signup"
-                className="w-full text-center bg-black text-white text-lg py-2 px-4 rounded-[15px] hover:bg-[#064918] transition"
-            >
-                Sign Up
-            </Link>
+          <h2 className="text-white text-2xl font-bold">Getting Started</h2>
+          <button
+            onClick={() => navigate("/login")}
+            className="w-full text-center bg-black text-white text-lg py-2 px-4 rounded-[15px] hover:bg-[#064918] transition"
+          >
+            Log In
+          </button>
+          <button
+            onClick={() => navigate("/signup")}
+            className="w-full text-center bg-black text-white text-lg py-2 px-4 rounded-[15px] hover:bg-[#064918] transition"
+          >
+            Sign Up
+          </button>
         </div>
       </nav>
     </>

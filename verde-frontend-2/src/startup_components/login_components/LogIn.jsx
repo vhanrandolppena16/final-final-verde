@@ -1,9 +1,11 @@
 // Login.jsx
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/images/Verde Full Logo.png";
 import hydroponics from "../../assets/images/hydroponics2.jpg";
-import {Link} from "react-router";
 
 const Login = ({ setView }) => {
+  const navigate = useNavigate();
+
   return (
     <>
       {/* Logo */}
@@ -32,41 +34,44 @@ const Login = ({ setView }) => {
           </header>
         </div>
 
-        {/* Right Side with buttons */}
+        {/* Right Side with form */}
         <div className="ml-4 w-[45%] h-[80%] bg-black/30 p-5 rounded-[10px] text-center flex flex-col items-center justify-center gap-4">
-        <h2 className="text-white text-2xl font-bold">Log In</h2>
+          <h2 className="text-white text-2xl font-bold">Log In</h2>
 
-        <input
+          <input
             type="email"
             placeholder="Email"
             className="w-full max-w-sm px-4 py-2 border border-gray-300 rounded"
-        />
-        <input
+          />
+          <input
             type="password"
             placeholder="Password"
             className="w-full max-w-sm px-4 py-2 border border-gray-300 rounded"
-        />
+          />
 
-        <Link
-            to="/successful"
+          <button
+            onClick={() => navigate("/successful")}
             className="w-full max-w-sm text-center bg-black text-white text-lg py-2 px-4 rounded-[15px] hover:bg-[#064918] transition"
-        >
+          >
             Login
-        </Link>
+          </button>
 
-        <p className="text-sm">
+          <p className="text-sm">
             Haven't registered yet?{" "}
-            <Link to="/signup" className="text-blue-500 underline cursor-pointer">
-            Sign Up
-            </Link>
-        </p>
+            <span
+              onClick={() => navigate("/signup")}
+              className="text-blue-500 underline cursor-pointer"
+            >
+              Sign Up
+            </span>
+          </p>
 
-        <Link
-            to="/"
+          <button
+            onClick={() => navigate("/")}
             className="w-full max-w-sm text-center bg-gray-500 text-white py-2 rounded hover:bg-gray-600 transition"
-        >
+          >
             Back
-        </Link>
+          </button>
         </div>
       </nav>
     </>
