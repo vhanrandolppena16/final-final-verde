@@ -1,0 +1,143 @@
+.signup-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .signup-left {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end; 
+    justify-content: flex-start; 
+    text-align: left; 
+
+    background: url("../assets/images/hydroponics2.jpg") no-repeat center center;
+    background-size: cover;
+    
+    border-radius: 30px; /* Add border radius */
+    overflow: hidden; /* Ensures child elements do not exceed the border radius */
+    }
+
+.signup-left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(8px); 
+    
+    z-index: 0;
+}
+
+.signup-heading {
+    position: relative;
+    z-index: 1; 
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left; 
+    
+    padding: 1rem;
+
+    margin-left: 3%;
+    margin-bottom: 2%;
+
+    width: max-content; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.signup-right {
+    margin-left: 2%;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 45%; /* Adjust width to fit content */
+    height: 80%;
+    display: flex;
+    flex-direction: column; /* Ensures elements are in a vertical stack */
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 15px; /* Space between elements */
+}
+
+.signup-right h2 {
+    color: rgb(255, 255, 255);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.signup-button {
+    background: black;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100%; /* Makes buttons full-width */
+    transition: background 0.3s ease;
+}
+
+.signup-button:hover {
+    background: #064918; /* Slightly lighter on hover */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    /* margin: 10px 0; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .switch-link {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+  }
+  
+  .back-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: gray;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .back-btn:hover {
+    background: darkgray;
+  }
+  
+  .logo-container {
+    position: fixed;  /* Ensures it stays above everything */
+    top: 10px;
+    left: 10px;
+    z-index: 20;  /* Higher z-index keeps it on top */
+  }
+  
+  .app-logo {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+  }
