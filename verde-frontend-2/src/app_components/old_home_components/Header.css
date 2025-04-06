@@ -1,0 +1,99 @@
+/*Header.css */
+
+    /* Header Container*/
+    .header_container {
+        width: 100%;
+        max-width: 100wv;
+        height: 80px;
+        background-color: #a2e2a5;
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+        /* padding: 0 1rem; */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    /* Logo Container */
+    .header_logo_container {
+        background-color: #fff;
+        opacity: 50%;
+        width: auto;
+        max-width: 16.35%;
+        height: 100%;
+        flex: 1;
+        display: flex;
+        padding: 0 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header_logo {
+        height: 75px;
+        object-fit: contain;
+        width: auto;
+    }
+
+    /* Navigation Display */
+    .navigation_display_container {
+        background-color: #cb5555;
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1.5rem; /* Adds spacing inside */
+        margin-left: 15px; /* Space between logo and navigation */
+        width: auto; /* Adjusts dynamically */
+        min-width: 50px; /* Ensures some width even for short text */
+        border-radius: 8px; /* Optional: rounded corners for better appearance */
+    } 
+
+    /* Navigation Text */
+    .navigation_display_text {
+        margin: 2%;
+        color: #000000;
+    }
+
+    /* User Greeting Section */
+    .user_greeting_container {
+        background-color: rgb(13, 89, 155);
+        width: auto;
+        padding: 0.5rem 1.5rem; /* Adds spacing inside */
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: auto;
+        margin-right: 1%;
+        min-width: 50px; /* Ensures some width even for short text */
+        border-radius: 8px; /* Optional: rounded corners for better appearance */
+    }
+
+    /* MUI Icon Styling */
+    .user_icon {
+        font-size: 50px !important;
+        color: #000;
+    }
+
+    /* User Text */
+    .user_text {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .hello_text {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .user_role {
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+
